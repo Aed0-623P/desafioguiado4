@@ -15,7 +15,7 @@ class Chofer(models.Model):
     nombre = models.CharField(max_length=50, null=False, blank=False)
     apellido = models.CharField(max_length=50, null=False, blank=False)
     activo = models.BooleanField(default=False, null=False, blank=False)
-    creacion_reg = models.DateField(auto_now_add=False)
+    creacion_reg = models.DateField(auto_now_add=True)
     vehiculo_id = models.OneToOneField('Vehiculo', max_length=6, on_delete=models.CASCADE, default="autito", to_field='patente')
 
 class RegistroContabilidad(models.Model):
